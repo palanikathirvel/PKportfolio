@@ -1019,28 +1019,45 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 /* ─── SVG LOGO STYLING ─── */
 .social-svg-link {
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 72px;
+  height: 72px;
+  padding: 10px;
+  border-radius: 18px;
   background: var(--surface);
   border: 1px solid var(--border);
-  transition: var(--trans);
+  color: var(--text2);
+  transition: transform var(--trans), border-color var(--trans), background var(--trans), color var(--trans);
+  text-decoration: none;
 }
 .social-svg-link:hover {
   background: var(--accent-dim);
   border-color: var(--accent);
-  transform: translateY(-3px);
+  color: var(--accent);
+  transform: translateY(-3px) scale(1.02);
 }
 .social-svg-link svg {
-  width: 20px;
-  height: 20px;
-  fill: var(--text2);
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
   transition: fill var(--trans);
 }
 .social-svg-link:hover svg {
-  fill: var(--accent);
+  fill: currentColor;
+}
+.social-svg-link .social-label {
+  display: block;
+  margin-top: 10px;
+  font-size: .72rem;
+  letter-spacing: .03em;
+  color: var(--text3);
+  font-weight: 700;
+  text-align: center;
+}
+.social-svg-link:hover .social-label {
+  color: currentColor;
 }
 
 /* ─── CONTACT ─── */
