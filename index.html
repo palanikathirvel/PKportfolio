@@ -1068,10 +1068,12 @@ footer strong { color: var(--accent); }
 /* ─── RESPONSIVE ─── */
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-card { display: none; }
+  .hero-card { display: block; margin-top: 40px; }
   .about-grid, .exp-edu-grid, .contact-grid, .certs-section { grid-template-columns: 1fr; }
   .skills-grid, .projects-grid { grid-template-columns: 1fr; }
   .certs-list { grid-template-columns: 1fr; }
+  .cert-card { flex-direction: column; }
+  .cert-view-btn { margin-top: 12px; width: 100%; text-align: center; }
   .cert-images-gallery { grid-template-columns: repeat(2, 1fr); }
   .internship-images-gallery { grid-template-columns: 1fr; }
   .nav-links { display: none; }
@@ -1209,7 +1211,7 @@ footer strong { color: var(--accent); }
         </p>
         <div class="hero-actions fade-in">
           <a href="mailto:palanikathirvel05@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Get in Touch</a>
-          <a href="https://palaniportfolio.lovable.app/" target="_blank" class="btn btn-ghost"><i class="fa-solid fa-globe"></i> Live Portfolio</a>
+          <a href="images/Palani Kathirvel P final ATS resume.pdf" download class="btn btn-ghost"><i class="fa-solid fa-download"></i> Download Resume</a>
         </div>
         <div class="hero-socials fade-in">
           <a class="social-svg-link" href="https://github.com/palanikathirvel" target="_blank" title="GitHub">
