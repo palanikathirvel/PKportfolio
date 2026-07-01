@@ -727,6 +727,7 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
   transition: border-color var(--trans), transform var(--trans), box-shadow var(--trans);
   position: relative;
   overflow: hidden;
+  justify-content: space-between;
 }
 .cert-card::before {
   content: '';
@@ -760,6 +761,24 @@ button { cursor: pointer; font-family: var(--font); border: none; background: no
 }
 .cert-name { font-size: .88rem; font-weight: 600; line-height: 1.35; }
 .cert-provider { font-size: .75rem; color: var(--text3); margin-top: 3px; font-family: var(--mono); }
+.cert-view-btn {
+  background: var(--accent-dim);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: .75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--trans);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.cert-view-btn:hover {
+  background: var(--accent);
+  color: #0a0d13;
+  box-shadow: 0 4px 12px rgba(0,229,200,.2);
+}
 .internship-certs { margin-bottom: 32px; }
 .cert-images-gallery {
   display: grid;
@@ -1492,27 +1511,24 @@ footer strong { color: var(--accent); }
           <div class="cert-category-title"><i class="fa-solid fa-briefcase"></i> Internship Certificates</div>
           <div class="certs-list">
             <div class="cert-card">
-              <div class="cert-icon"><i class="fa-solid fa-file-certificate"></i></div>
-              <div>
-                <div class="cert-name">Frontend Developer Intern</div>
-                <div class="cert-provider">YoundersBot · 2 Months</div>
+              <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1;">
+                <div class="cert-icon"><i class="fa-solid fa-file-certificate"></i></div>
+                <div>
+                  <div class="cert-name">Frontend Developer Intern</div>
+                  <div class="cert-provider">YoundersBot · 2 Months</div>
+                </div>
               </div>
+              <button class="cert-view-btn" onclick="openModal('https://via.placeholder.com/600x450/0099ff/0a0d13?text=YoundersBot+Certificate')"><i class="fa-solid fa-image"></i> View</button>
             </div>
             <div class="cert-card">
-              <div class="cert-icon"><i class="fa-solid fa-file-certificate"></i></div>
-              <div>
-                <div class="cert-name">Web Development Intern</div>
-                <div class="cert-provider">CodeSoft · 4 Weeks</div>
+              <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1;">
+                <div class="cert-icon"><i class="fa-solid fa-file-certificate"></i></div>
+                <div>
+                  <div class="cert-name">Web Development Intern</div>
+                  <div class="cert-provider">CodeSoft · 4 Weeks</div>
+                </div>
               </div>
-            </div>
-          </div>
-          <!-- Internship Certificate Images -->
-          <div class="internship-images-gallery">
-            <div class="internship-img-item">
-              <img src="https://via.placeholder.com/600x450/0099ff/0a0d13?text=YoundersBot+Certificate" alt="YoundersBot Internship Certificate" class="cert-clickable" onclick="openModal(this.src)" style="cursor: pointer;" />
-            </div>
-            <div class="internship-img-item">
-              <img src="https://drive.google.com/uc?export=view&id=1PtdNuxQPefTdlUYXooIblZ1agoZcAC4t" alt="CodeSoft Internship Certificate" class="cert-clickable" onclick="openModal(this.src)" style="cursor: pointer;" />
+              <button class="cert-view-btn" onclick="openModal('https://drive.google.com/uc?export=view&id=1PtdNuxQPefTdlUYXooIblZ1agoZcAC4t')"><i class="fa-solid fa-image"></i> View</button>
             </div>
           </div>
         </div>
@@ -1521,67 +1537,64 @@ footer strong { color: var(--accent); }
           <div class="cert-category-title"><i class="fa-solid fa-graduation-cap"></i> Course Certifications</div>
           <div class="certs-list">
             <div class="cert-card">
-              <div class="cert-icon"><i class="fa-brands fa-js"></i></div>
-              <div>
-                <div class="cert-name">JavaScript for Beginners</div>
-                <div class="cert-provider">Udemy</div>
+              <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1;">
+                <div class="cert-icon"><i class="fa-brands fa-js"></i></div>
+                <div>
+                  <div class="cert-name">JavaScript for Beginners</div>
+                  <div class="cert-provider">Udemy</div>
+                </div>
               </div>
+              <button class="cert-view-btn" onclick="openModal('https://drive.google.com/uc?export=view&id=134AQM7cvAUbyzJNEn3MJZ2IU-nwfDVCx')"><i class="fa-solid fa-image"></i> View</button>
             </div>
             <div class="cert-card">
-              <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
-              <div>
-                <div class="cert-name">MySQL Bootcamp</div>
-                <div class="cert-provider">Udemy</div>
+              <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1;">
+                <div class="cert-icon"><i class="fa-solid fa-database"></i></div>
+                <div>
+                  <div class="cert-name">MySQL Bootcamp</div>
+                  <div class="cert-provider">Udemy</div>
+                </div>
               </div>
+              <button class="cert-view-btn" onclick="openModal('https://drive.google.com/uc?export=view&id=1SiBwvjM4mHgb11MYPUTi5pNZQdD8d1gG')"><i class="fa-solid fa-image"></i> View</button>
             </div>
             <div class="cert-card">
-              <div class="cert-icon"><i class="fa-brands fa-java"></i></div>
-              <div>
-                <div class="cert-name">Java Fundamentals</div>
-                <div class="cert-provider">Scalar</div>
+              <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1;">
+                <div class="cert-icon"><i class="fa-brands fa-java"></i></div>
+                <div>
+                  <div class="cert-name">Java Fundamentals</div>
+                  <div class="cert-provider">Scalar</div>
+                </div>
               </div>
+              <button class="cert-view-btn" onclick="openModal('images/java certificate.png')"><i class="fa-solid fa-image"></i> View</button>
             </div>
             <div class="cert-card">
-              <div class="cert-icon"><i class="fa-brands fa-react"></i></div>
-              <div>
-                <div class="cert-name">React JS Mastery</div>
-                <div class="cert-provider">Scalar</div>
+              <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1;">
+                <div class="cert-icon"><i class="fa-brands fa-react"></i></div>
+                <div>
+                  <div class="cert-name">React JS Mastery</div>
+                  <div class="cert-provider">Scalar</div>
+                </div>
               </div>
+              <button class="cert-view-btn" onclick="openModal('images/React certificate.jpg')"><i class="fa-solid fa-image"></i> View</button>
             </div>
             <div class="cert-card">
-              <div class="cert-icon"><i class="fa-solid fa-server"></i></div>
-              <div>
-                <div class="cert-name">Spring Boot Essentials</div>
-                <div class="cert-provider">Scalar</div>
+              <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1;">
+                <div class="cert-icon"><i class="fa-solid fa-server"></i></div>
+                <div>
+                  <div class="cert-name">Spring Boot Essentials</div>
+                  <div class="cert-provider">Scalar</div>
+                </div>
               </div>
+              <button class="cert-view-btn" onclick="openModal('https://via.placeholder.com/300x400/0099ff/0a0d13?text=SpringBoot+Certificate')"><i class="fa-solid fa-image"></i> View</button>
             </div>
             <div class="cert-card">
-              <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
-              <div>
-                <div class="cert-name">DSA & Problem Solving</div>
-                <div class="cert-provider">Multiple Platforms</div>
+              <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1;">
+                <div class="cert-icon"><i class="fa-solid fa-code"></i></div>
+                <div>
+                  <div class="cert-name">DSA & Problem Solving</div>
+                  <div class="cert-provider">Multiple Platforms</div>
+                </div>
               </div>
-            </div>
-          </div>
-          <!-- Course Certificate Images Gallery -->
-          <div class="cert-images-gallery">
-            <div class="cert-img-item">
-              <img src="https://drive.google.com/uc?export=view&id=134AQM7cvAUbyzJNEn3MJZ2IU-nwfDVCx" alt="JavaScript Certificate" class="cert-clickable" onclick="openModal(this.src)" style="cursor: pointer;" />
-            </div>
-            <div class="cert-img-item">
-              <img src="https://drive.google.com/uc?export=view&id=1SiBwvjM4mHgb11MYPUTi5pNZQdD8d1gG" alt="MySQL Certificate" class="cert-clickable" onclick="openModal(this.src)" style="cursor: pointer;" />
-            </div>
-            <div class="cert-img-item">
-              <img src="images/java certificate.png" alt="Java Certificate" class="cert-clickable" onclick="openModal(this.src)" style="cursor: pointer;" />
-            </div>
-            <div class="cert-img-item">
-              <img src="images/React certificate.jpg" alt="React Certificate" class="cert-clickable" onclick="openModal(this.src)" style="cursor: pointer;" />
-            </div>
-            <div class="cert-img-item">
-              <img src="https://via.placeholder.com/300x400/0099ff/0a0d13?text=SpringBoot+Certificate" alt="Spring Boot Certificate" class="cert-clickable" onclick="openModal(this.src)" style="cursor: pointer;" />
-            </div>
-            <div class="cert-img-item">
-              <img src="https://via.placeholder.com/300x400/00e5c8/0a0d13?text=DSA+Certificate" alt="DSA Certificate" class="cert-clickable" onclick="openModal(this.src)" style="cursor: pointer;" />
+              <button class="cert-view-btn" onclick="openModal('https://via.placeholder.com/300x400/00e5c8/0a0d13?text=DSA+Certificate')"><i class="fa-solid fa-image"></i> View</button>
             </div>
           </div>
         </div>
@@ -1590,30 +1603,45 @@ footer strong { color: var(--accent); }
           <div class="cert-category-title"><i class="fa-brands fa-leetcode"></i> LeetCode Badges &amp; Achievements</div>
           <div class="certs-list">
             <div class="cert-card">
-              <div class="cert-icon"><i class="fa-solid fa-medal"></i></div>
-              <div>
-                <div class="cert-name">LeetCode 50 Days Challenge</div>
-                <div class="cert-provider">2026 Challenge Series</div>
+              <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1;">
+                <div class="cert-icon"><i class="fa-solid fa-medal"></i></div>
+                <div>
+                  <div class="cert-name">LeetCode 50 Days Challenge</div>
+                  <div class="cert-provider">2026 Challenge Series</div>
+                </div>
               </div>
+              <button class="cert-view-btn" onclick="openModal('images/Leetcode 50 days 2026.jpg')"><i class="fa-solid fa-image"></i> View</button>
             </div>
             <div class="cert-card">
-              <div class="cert-icon"><i class="fa-solid fa-medal"></i></div>
-              <div>
-                <div class="cert-name">LeetCode June Badge</div>
-                <div class="cert-provider">Monthly Achievement · June 2026</div>
+              <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1;">
+                <div class="cert-icon"><i class="fa-solid fa-medal"></i></div>
+                <div>
+                  <div class="cert-name">LeetCode June Badge</div>
+                  <div class="cert-provider">Monthly Achievement · June 2026</div>
+                </div>
               </div>
+              <button class="cert-view-btn" onclick="openModal('images/leetcode june bade.png')"><i class="fa-solid fa-image"></i> View</button>
             </div>
-          </div>
-          <!-- LeetCode Badge Images Gallery -->
-          <div class="cert-images-gallery">
-            <div class="cert-img-item">
-              <img src="images/Leetcode 50 days 2026.jpg" alt="LeetCode 50 Days Badge" class="cert-clickable" onclick="openModal(this.src)" style="cursor: pointer;" />
+            <div class="cert-card">
+              <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1;">
+                <div class="cert-icon"><i class="fa-solid fa-medal"></i></div>
+                <div>
+                  <div class="cert-name">LeetCode 100 Days Challenge 2026</div>
+                  <div class="cert-provider">Extended Challenge Series</div>
+                </div>
+              </div>
+              <button class="cert-view-btn" onclick="openModal('images/Leetcode 100 days 2026.jpg')"><i class="fa-solid fa-image"></i> View</button>
             </div>
-            <div class="cert-img-item">
-              <img src="images/leetcode june bade.png" alt="LeetCode June Badge" class="cert-clickable" onclick="openModal(this.src)" style="cursor: pointer;" />
+            <div class="cert-card">
+              <div style="display: flex; align-items: flex-start; gap: 12px; flex: 1;">
+                <div class="cert-icon"><i class="fa-solid fa-medal"></i></div>
+                <div>
+                  <div class="cert-name">LeetCode 100 Days Challenge 2025</div>
+                  <div class="cert-provider">Extended Challenge Series</div>
+                </div>
+              </div>
+              <button class="cert-view-btn" onclick="openModal('images/leetcode 100 days 2025.jpg')"><i class="fa-solid fa-image"></i> View</button>
             </div>
-          </div>
-        </div>
       </div>
       <!-- Achievements & Clubs -->
       <div class="fade-in">
